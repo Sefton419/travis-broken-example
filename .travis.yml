@@ -1,7 +1,13 @@
 language: php
-dist: Trusty
+dist: trusty
 php:
-- 5.5
-- 5.4
-- hhvm
-script: phpunit Test.php
+  - "7.1"
+  - "7.0"
+  - "5.6"
+  - "5.5"
+  - "5.4"
+  - hhvm
+matrix:
+  include:
+    - php: "5.3"
+      dist: precise
